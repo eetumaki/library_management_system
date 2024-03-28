@@ -1,7 +1,7 @@
 #transaction.py
 
 class Transaction:
-    def __init__(self, book, library_member):
+    def __init__(self, book: str, library_member: str):
         self.book = book
         self.library_member = library_member
 

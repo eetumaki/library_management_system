@@ -1,7 +1,7 @@
 #book.py
 
 class Book:
-    def __init__(self, title, author, isbn, available_copies):
+    def __init__(self, title: str, author: str, isbn: int, available_copies: int):
         self.title = title
         self.author = author
         self.isbn = isbn

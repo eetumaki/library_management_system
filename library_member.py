@@ -1,7 +1,7 @@
 #library_member.py
 
 class LibraryMember:
-    def __init__(self, name, member_id):
+    def __init__(self, name: str, member_id: int):
         self.name = name
         self.member_id = member_id
         self.borrowed_books = []
