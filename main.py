@@ -3,19 +3,23 @@ from book import Book
 from library_member import LibraryMember
 from transaction import Transaction
 
-# Create some books
-book1 = Book("Python Programming", "John Smith", "978-0134465679", 5)
-book2 = Book("Introduction to Data Science", "Jane Doe", "978-0596520990", 3)
+library_inventory = {}
 
-# Create a library member
-member1 = LibraryMember("Alice", "M001")
+def add_book_to_inventory(title, author, isbn, available_copies):
+    if isbn in library_inventory:
+        print("Book already exists. Updating existing entry...")
+        library_inventory[isbn].available_copies += available_copies
+    else:
+        print("Adding new book to inventory...")
+        new_book = Book(title, author, isbn, available_copies)
+        library_inventory[isbn] = new_book
 
-# Test borrowing and returning books
-transaction1 = Transaction(book1, member1)
-transaction1.process_transaction()
+add_book_to_inventory("Python Programming", "John Smith", "978-0134465679", 5)
+add_book_to_inventory("Introduction to Data Science", "Jane Doe", "978-0596520990", 3)
 
-transaction2 = Transaction(book2, member1)
-transaction2.process_transaction()
+# Display library inventory
+print("Library Inventory:")
+for isbn, book in library_inventory.items():
+    print(f"ISBN: {isbn}, Title: {book.title}, Available Copies: {book.available_copies}")
 
-member1.return_book(book1)
-member1.return_book(book2)
+# Continue with the rest of the logic...

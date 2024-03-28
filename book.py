@@ -1,7 +1,7 @@
 #book.py
 
 class Book:
-    def __init__(self, title: str, author: str, isbn: int, available_copies: int):
+    def __init__(self, title: str, author: str, isbn: str, available_copies: int):
         self.title = title
         self.author = author
         self.isbn = isbn
@@ -12,8 +12,10 @@ class Book:
         if self.available_copies > 0:
             self.available_copies -= 1
             print(f"Succesfully checked out '{self.title}'.")
+            return True
         else:
             print(f"Sorry, '{self.title}' is not available for checkout.")
+            return False
 
     def return_book(self):
         self.available_copies += 1
