@@ -1,8 +1,9 @@
 #library_member.py
+from user import User
 
-class LibraryMember:
-    def __init__(self, name: str, member_id: int):
-        self.name = name
+class LibraryMember(User):
+    def __init__(self, name: str, member_id: str):
+        super().__init__(name)
         self.member_id = member_id
         self.borrowed_books = []
 
