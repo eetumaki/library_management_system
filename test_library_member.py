@@ -2,6 +2,8 @@ import unittest
 from library_member import LibraryMember
 from book import Book
 
+""" This will test the borrowing and returning methods of the LibraryMember class"""
+
 class TestLibraryMemberMethods(unittest.TestCase):
     def setUp(self):
         self.member = LibraryMember("Alice", "M001")

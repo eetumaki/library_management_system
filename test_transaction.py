@@ -3,6 +3,8 @@ from transaction import Transaction
 from library_member import LibraryMember
 from book import Book
 
+""" This will test the process of borrowing book through Transaction class"""
+
 class TestTransactionMethods(unittest.TestCase):
     def setUp(self):
         self.member = LibraryMember("Alice", "M001")

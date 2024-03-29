@@ -1,6 +1,9 @@
 import unittest
 from book import Book
 
+
+""" This will test the check out method of the Book class """
+
 class TestBookMethods(unittest.TestCase):
     def setUp(self):
         self.book = Book("Python Programming", "John Smith", "978-0134465679", 5)
