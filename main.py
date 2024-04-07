@@ -56,8 +56,8 @@ def main():
 
         if choice == '1':
             name = input("Enter name of the library member: ")
-            member_id = input("Enter member ID: ")
-            add_library_member(name, member_id)
+            user_id = str(len(library_members) + 1)
+            add_library_member(name, user_id)
 
         elif choice == '2':
             title = input("Enter title of the book: ")
