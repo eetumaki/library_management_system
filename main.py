@@ -111,6 +111,6 @@ def main():
             print("Invalid choice. Please try again.") # If the users choice is invalid, print an error message
 
 
-# If the file is being run directly, call the main function
+
 if __name__ == "__main__":
     main()
