@@ -37,10 +37,10 @@ def display_library_inventory():
     for isbn, book in library_inventory.items(): # For each book in dictionary
         print(f"ISBN: {isbn}, Title: {book.title}, Available Copies: {book.available_copies}") # print books isbn, title and number of available copies
 
-# Main function
+
 def main():
-    while True: # Loop until user chooses to exit
-        print("\nMenu:") # Print the menu
+    while True:
+        print("\nMenu:")
         print("1. Add Library Member")
         print("2. Add Book")
         print("3. Borrow Book")
@@ -50,7 +50,7 @@ def main():
         print("7. Check Borrowed Books By Member")
         print("8. Exit")
 
-        choice = input("Enter your choice: ") # Get users choice
+        choice = input("Enter your choice: ")
 
         """ Depending on the users choice, call the appropriate function or print an error message """
 
