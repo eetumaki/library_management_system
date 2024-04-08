@@ -23,7 +23,7 @@ def add_book(title, author, isbn, available_copies):
         library_inventory[isbn] = new_book
         print(f"Book '{title}' added to the library inventory.")
     else:
-        print("Book with this ISBN already exists in the library.") # If the isbn is already in use, print an error message
+        print("Book with this ISBN already exists in the library.")
 
 # Function to display all library members
 def display_library_members():
@@ -96,19 +96,19 @@ def main():
                 borrowed_books = library_members[member_id].borrowed_books # Get list of books borrowed by member
                 if borrowed_books: # If member has borrowed any books
                     print(f"\nBooks borrowed by '{library_members[member_id].name}':")
-                    for book in borrowed_books: # For each book borrowed
+                    for book in borrowed_books:
                         print(f"Title: {book.title}, Author: {book.author}, ISBN: {book.isbn}") # Print the books title, author and isbn
                 else:
                     print("No books currently borrowed by this member.") # If member hasn't borrowed any books, print an error message
             else:
-                print("Member not found.") # If the member doesn't exist, print an error message
+                print("Member not found.")
 
         elif choice == '8':
-            print("Exiting program.") # Exit the program
+            print("Exiting program.")
             break
 
         else:
-            print("Invalid choice. Please try again.") # If the users choice is invalid, print an error message
+            print("Invalid choice. Please try again.")
 
 
 
