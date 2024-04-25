@@ -6,7 +6,7 @@ class Book:
         self.author = author
         self.isbn = isbn # id of the book
         self.available_copies = available_copies # Number of available copies of the book
-        self.total_copies = available_copies # Total number of copies of the book
+        self.total_copies = int(available_copies) # Total number of copies of the book
 
     # Method to check out a book
     def check_out(self):
